@@ -32,7 +32,7 @@ body,
 input,
 button {
   font-size: 1.6rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 form {
