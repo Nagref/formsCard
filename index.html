@@ -4,7 +4,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
     <meta charset="UTF-8" />
@@ -21,13 +21,13 @@
       <section class="inputs flex">
         <div class="input-wrapper">
           <label for="cc-number">Número do cartão</label>
-          <input id="cc-number" type="text" placeholder="**** **** **** ****" minlength="19"
-          required
+          <input
+            id="cc-number"
+            type="text"
+            placeholder="**** **** **** ****"
+            minlength="19"
+            required
           />
-          <div class="warning">
-            <img src="./assets/warning.svg" alt="ícone de alerta" />
-            Número do cartão é obrigatório
-          </div>
         </div>
         <div class="input-wrapper">
           <label for="cc-holder">Nome do titular</label>
@@ -46,13 +46,13 @@
         <div class="col-2 flex">
           <div class="input-wrapper">
             <label for="cc-validity">Validade</label>
-            <input id="cc-validity" type="text" placeholder="mm/aa" minlength="5"
-            required
+            <input
+              id="cc-validity"
+              type="text"
+              placeholder="mm/aa"
+              minlength="5"
+              required
             />
-            <div class="warning">
-            <img src="./assets/warning.svg" alt="ícone de alerta" />
-            Data de expiração obrigatória
-          </div>
           </div>
 
           <div class="input-wrapper">
@@ -64,13 +64,13 @@
                 title="Esse número está, geralmente, nas costas do seu cartão"
               />
             </label>
-            <input id="cc-cvv" type="text" placeholder="***" minlength="3"
-            required
+            <input
+              id="cc-cvv"
+              type="text"
+              placeholder="***"
+              minlength="3"
+              required
             />
-            <div class="warning">
-            <img src="./assets/warning.svg" alt="ícone de alerta" />
-            CVV obrigatório
-          </div>
           </div>
         </div>
       </section>

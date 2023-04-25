@@ -8,10 +8,24 @@
 
 :root {
   font-size: 62.5%;
+  --background: #22212c;
+  --comment: #7970a9;
+  --comment-secondary: #454158;
+  --selection: #414d58;
+  --selection-secondary: #8f9ba8;
+  --black: #0b0d0f;
+  --foreground: #f8f8f2;
+  --cyan: #80ffea;
+  --green: #8aff80;
+  --orange: #ffca80;
+  --yellow: #ffff80;
+  --red: #ff9580;
+  --pink: #ff80bf;
+  --purple: #9580ff;
 }
 
 body {
-  background: #1f2937;
+  background: var(--background);
 }
 
 body,
@@ -28,8 +42,8 @@ form {
 }
 
 #credit-card {
-  width: 32.8rem;
-  height: 21.2rem;
+  width: 40rem;
+  height: 20rem;
 
   perspective: 60rem;
 }
@@ -50,13 +64,26 @@ form {
 
 #credit-card .front {
   background: url(./assets/cc-front.png) no-repeat;
+  background-size: 350px;
   transform: rotateY(0);
 }
 
 #credit-card .back {
   background: url(./assets/cc-back.png) no-repeat;
+  background-size: 350px;
   transform: rotateY(-180deg);
   top: -5px;
+}
+
+@media screen and (max-width: 600px) {
+  #credit-card .front,
+  #credit-card .back {
+    background-size: 320px;
+  }
+  #credit-card {
+    width: 31rem;
+    height: 18rem;
+  }
 }
 
 #credit-card:active .front,
@@ -83,7 +110,7 @@ form {
 label {
   font-weight: 600;
   font-size: 1.4rem;
-  color: #e5e7eb;
+  color: var(--foreground);
 
   gap: 0.4rem;
   align-items: center;
@@ -93,25 +120,25 @@ input {
   margin-top: 0.4rem;
 
   width: 100%;
-  font-family: "Source Sans Pro";
+  font-family: 'JetBrains Mono', monospace;
 
   padding: 1.2rem;
-  border: 0.1rem solid #374151;
+  border: 0.1rem solid var(--selection-secondary);
 
-  background: #111827;
+  background: var(--black);
   border-radius: 0.4rem;
 
-  color: #f3f4f6;
+  color: var(--foreground);
 }
 
 input:focus {
-  border: 0.15rem solid #9333ea;
-  outline: 0.15rem solid #9333ea;
+  border: 0.15rem solid var(--green);
+  outline: 0.15rem solid var(--green);
 }
 
 input:invalid:focus {
-  outline: 0.15rem solid #fb7185;
-  border: 0.15rem solid #fb7185;
+  outline: 0.15rem solid var(--red);
+  border: 0.15rem solid var(--red);
 }
 
 input + .warning {
@@ -121,7 +148,7 @@ input + .warning {
 input:invalid:focus + .warning {
   font-size: 1.4rem;
   margin-top: 0.8rem;
-  color: #fb7185;
+  color: var(--red);
 
   display: flex;
   align-items: center;
@@ -150,7 +177,7 @@ input:invalid:focus + .warning {
   gap: 0.8rem;
 
   font-size: 1.4rem;
-  color: #e5e7eb;
+  color: var(--foreground);
 }
 
 button {
@@ -159,19 +186,19 @@ button {
   border: 0;
   padding: 1.6rem;
   width: 100%;
-  background: #9333ea;
+  background: var(--cyan);
   box-shadow: 0rem 0.4rem 1.6rem rgba(0, 0, 0, 0.1);
   border-radius: 0.4rem;
 
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 2.4rem;
-  color: #f9fafb;
+  color: var(--black);
 
   cursor: pointer;
   transition: background 0.2s;
 }
 
 button:hover {
-  background: #a855f7;
+  background: var(--green);
 }
